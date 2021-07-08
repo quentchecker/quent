@@ -1,0 +1,499 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 100%;
+	color: white;
+	background-color: black;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+h1{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 15%;
+}
+
+/* progress bar */
+
+*, *::before *::after {
+    box-sizing: border-box;
+}
+
+.progress-bar{
+    position: relative;
+    width: 500px;
+    height: 3em;
+    background-color: white;
+    border-radius: 1.5em;
+    color: black;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: fade-out 0s ease-out forwards 5s;
+}
+
+.progress-bar::before{
+    content: attr(data-label);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: .5em;
+    top: .5em;
+    bottom: .5em;
+    width: calc(var(--width, 0) * 1%);
+    min-width: .01rem;
+    max-width: calc(100% - 3em);
+    background-color: grey;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+@keyframes fade-out{
+    100%{
+        opacity: 0;
+    }
+
+}
+
+
+/* confimrmed */
+.ani-after{
+    opacity: 0;
+    animation: fade-in 0s ease-in forwards 5s;
+}
+
+.true{
+    position: absolute;
+    display: grid;
+    top: 30%;
+    left: 15%;
+    width: 60%;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+    background-color: greenyellow;
+    border-radius: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.checkmarkimg{
+    display: block;
+    grid-column: 1;  
+    max-width: 30px;
+    max-width: auto;
+    float: left;
+}
+
+.confirmed{
+    font-size: 150%;
+    grid-column: 2;
+    align-content: flex-start;
+}
+
+.happy{
+    max-width: 50%;
+    margin-left: 25%;
+}
+
+@keyframes fade-in{
+    100%{
+        opacity: 100;
+    }
+}
+
+/* countdown */
+
+.textcount{
+    margin-top: 10%;
+    margin-bottom: 2%;
+    text-decoration: underline;
+    text-align: center;
+}
+.countdown-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30%;
+}
+
+.big-text{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.countdown-container > div{
+    margin: 0 2rem;
+    text-align: center;
+    border: 2px solid #fff;
+    padding: 0px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    color: #fff;
+    min-width: 150px;
+}
+
+@media (max-width:992px){
+    .countdown-container > div{
+        margin: 0 1rem;
+    }
+}
+@media (max-width:992px){
+    .countdown-container{
+        flex-wrap: wrap;
+    }
+    .countdown-container > div{
+        margin: 1rem auto;
+        max-width: 150px;
+    }
+    .title{
+        font-size: 1.5rem;
+    }
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+   
+    h1{
+        margin-top: 15%;
+        margin-bottom: 40%;
+    }
+    
+    /* progress bar */
+    .progress-bar{
+        width: 300px;
+        height: 3em;
+    }
+    
+    /* confimrmed */
+    
+    .true{
+        top: 18%;
+        left: 15%;
+        width: 60%;
+        height: -20%;
+        grid-template-columns: 1fr 1fr;
+        padding: 50px;
+        background-color: greenyellow;
+        border-radius: 2rem;
+        padding-top: -10%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .checkmarkimg{
+        max-width: 30px;
+        max-width: auto;
+        transform: translate(-50%, 50%);
+    }
+    
+    .confirmed{
+        font-size: 150%;
+    }
+    
+    .happy{
+        max-width: 60%;
+        margin-left: 20%;
+        margin-top: 20%;
+    }
+    
+    
+    /* countdown */
+    .textcount{
+        margin-top: 72%;
+        margin-bottom: 2%;
+    }
+    .countdown-container{
+        margin-bottom: 126%;
+    }
+    
+    .big-text{
+        font-size: 3rem;
+    }
+    
+    .countdown-container > div{
+        margin: 0.2 0.5rem;
+        border: 2px solid #fff;
+        padding: 0px 20px;
+        border-radius: 12px;
+        min-width: 150px;
+    }
+
+}
+
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */ 
+
+/* Portrait and Landscape 
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+   
+    h1{
+        margin-top: 13%;
+        margin-bottom: 40%;
+    }
+    
+    /* progress bar 
+    .progress-bar{
+        width: 300px;
+        height: 4em;
+        border-radius: 2em;
+    }
+
+    .progress-bar::before{
+        content: attr(data-label);
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: .5em;
+        top: .5em;
+        bottom: .5em;
+        width: calc(var(--width, 0) * 1.2%);
+        min-width: .01rem;
+        max-width: calc(100% - 3em);
+        background-color: grey;
+        border-radius: 1.5em;
+        padding: 1em;
+    }
+    
+    /* confimrmed 
+    
+    .true{
+        top: 25%;
+    }
+    
+    .checkmarkimg{
+        max-width: 30px;
+        max-width: auto;
+        transform: translate(-50%, 50%);
+    }
+    
+    .confirmed{
+        font-size: 150%;
+    }
+    
+    .happy{
+        max-width: 100%;
+        margin-left: 0%;
+        margin-top: 20%;
+    }
+    
+    
+    /* countdown 
+    .textcount{
+        margin-top: 56%;
+        margin-bottom: 2%;
+    }
+    .countdown-container{
+        margin-bottom: 100%;
+    }
+
+}
+
+
+
+
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+   
+    h1{
+        margin-top: 13%;
+        margin-bottom: 40%;
+    }
+    
+    /* progress bar 
+    .progress-bar{
+        width: 300px;
+        height: 3em;
+        border-radius: 2em;
+    }
+
+    .progress-bar::before{
+        content: attr(data-label);
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: .5em;
+        top: .5em;
+        bottom: .5em;
+        width: calc(var(--width, 0) * 1%);
+        min-width: .01rem;
+        max-width: calc(100% - 3em);
+        background-color: grey;
+        border-radius: 1.5em;
+        padding: 1em;
+    }
+    
+    /* confimrmed 
+    
+    .true{
+        position: absolute;
+        display: grid;
+        top: 30%;
+        left: 5%;
+        width: 80%;
+        height: 2%;
+        grid-template-columns: 1fr 1fr;
+        padding: 50px;
+        background-color: greenyellow;
+        border-radius: 2rem;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .checkmarkimg{
+        max-width: 30px;
+        max-width: auto;
+        transform: translate(-50%, -50%);
+    }
+    
+    .confirmed{
+        font-size: 120%;
+        transform: translateY(-50%);
+    }
+    
+    .happy{
+        max-width: 100%;
+        margin-left: 0%;
+        margin-top: 10%;
+    }
+    
+    
+    /* countdown 
+    .textcount{
+        margin-top: 56%;
+        margin-bottom: 10%;
+    }
+    .countdown-container{
+        margin-bottom: 60%;
+    }
+} */
+
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+   
+    h1{
+        margin-top: 13%;
+        margin-bottom: 40%;
+    }
+    
+    /* progress bar */
+    .progress-bar{
+        width: 300px;
+        height: 4em;
+        border-radius: 2em;
+    }
+
+    .progress-bar::before{
+        content: attr(data-label);
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: .5em;
+        top: .5em;
+        bottom: .5em;
+        width: calc(var(--width, 0) * 2%);
+        min-width: .01rem;
+        max-width: calc(100% - 3em);
+        background-color: grey;
+        border-radius: 1.5em;
+        padding: 1em;
+    }
+    
+    /* confimrmed */
+    
+    .true{
+        top: 25%;
+        width: 70%;
+        grid-template-columns: 1fr 1fr;
+        padding: 50px;
+        background-color: greenyellow;
+        border-radius: 2rem;
+        margin-left: 0%;
+        margin-right: 5%;
+    }
+    
+    .checkmarkimg{
+        max-width: 30px;
+        max-width: auto;
+        transform: translate(-50%, 50%);
+    }
+    
+    .confirmed{
+        font-size: 150%;
+    }
+    
+    .happy{
+        max-width: 100%;
+        margin-left: 0%;
+        margin-top: 20%;
+    }
+    
+    
+    /* countdown */
+    .textcount{
+        margin-top: 56%;
+        margin-bottom: 2%;
+    }
+    .countdown-container{
+        margin-bottom: 80%;
+    }
+
+}
