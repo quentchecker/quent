@@ -65,10 +65,13 @@ h1{
 }
 
 
+
+
+
 /* confimrmed */
 .ani-after{
     opacity: 0;
-    animation: fade-in 0s ease-in forwards 5s;
+    animation: fade-in 1s ease-in forwards 5s;
 }
 
 .true{
@@ -110,6 +113,8 @@ h1{
     }
 }
 
+
+
 /* countdown */
 
 .textcount{
@@ -123,7 +128,7 @@ h1{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 30%;
+    margin-bottom: 15%;
 }
 
 .big-text{
@@ -142,6 +147,159 @@ h1{
     color: #fff;
     min-width: 150px;
 }
+/* line - seperator */
+.line{
+    background-color: #ccc;
+    height: 4px;
+}
+
+/* countdown2 */
+
+.textcountdown1{
+    margin-top: 15%;
+    margin-bottom: 2%;
+    text-decoration: underline;
+    text-align: center;
+}
+.countdown-container2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30%;
+}
+
+.big-text2{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.countdown-container2 > div{
+    margin: 0 2rem;
+    text-align: center;
+    border: 2px solid #fff;
+    padding: 0px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    color: #fff;
+    min-width: 150px;
+}
+
+/* countdown3 */
+
+.textcountdown2{
+    margin-top: 10%;
+    margin-bottom: 2%;
+    text-decoration: underline;
+    text-align: center;
+}
+.countdown-container3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30%;
+}
+
+.big-text3{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.countdown-container3 > div{
+    margin: 0 2rem;
+    text-align: center;
+    border: 2px solid #fff;
+    padding: 0px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    color: #fff;
+    min-width: 150px;
+}
+
+/* The switch - the box around the slider */
+.gaymode {
+    display: grid;
+    grid-template-columns: max-content max-content 100px;
+    grid-gap: 5px;
+    margin-left: 10px;
+    padding-bottom: 4%;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+.button-gay{
+    position: relative;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 5px;
+}
+
+
+
 
 @media (max-width:992px){
     .countdown-container > div{
@@ -163,9 +321,38 @@ h1{
 }
 
 
+  /*/////////////////// gaymode html \\\\\\\\\\\\\\\\\\*/
+
+.H-tester{
+    margin-bottom: 5%;
+}
+.gay-tester{
+    margin-bottom: 60%;
+}
+.tester-input{
+    display: grid;
+    text-align: center;
+
+}
 
 
+.B-count-container{
+    display: flex;
+    padding-top: 10%; 
+    padding-bottom: 30%; 
+    text-align: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
 
+.under-line-bcounter{
+    background-color: white;
+    height: 2px;
+    margin-bottom: 10%;
+}
+.B-count{
+    font-size: 4rem;
+}
 
 
 
@@ -264,6 +451,22 @@ h1{
         min-width: 150px;
     }
 
+    .H-tester{
+        margin-bottom: 5%;
+        margin-top: 50%;
+    }
+
+
+    /*gay mode */
+    .B-count-container{
+        padding-top: 80%; 
+        padding-bottom: 30%; 
+    }
+
+    .B-count{
+        font-size: 4rem;
+    }
+
 }
 
 
@@ -335,6 +538,22 @@ h1{
         margin-bottom: 100%;
     }
 
+    /* gaymode switch */
+    .gaymode {
+        display: grid;
+        grid-template-columns: 100px max-content max-content 100px;
+        grid-gap: 5px;
+        margin-left: 10px;
+    }
+
+    /*gay mode */
+    .B-count-container{
+        padding-top: 50%; 
+        padding-bottom: 30%; 
+    }
+    
+
+
 }
 
 /* -------------------------------------------------------------- */
@@ -401,6 +620,20 @@ h1{
         padding: 0px 20px;
         border-radius: 12px;
         min-width: 150px;
+    }
+
+
+    /* gaymode switch */
+    .gaymode {
+        display: grid;
+        grid-template-columns: 100px max-content max-content 100px;
+        grid-gap: 5px;
+        margin-left: 10px;
+    }
+
+    .B-count-container{
+        padding-top: 80%; 
+        padding-bottom: 30%; 
     }
 
 }
