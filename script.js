@@ -90,18 +90,8 @@ let sec3Item = document.querySelector("#sec3")
  setInterval(countDown3, 1000)
 
 
-//bodycount quent
 
 
-
-//var countUpDate = new Date("12 act 2025 00:00:00").getTime();
-//var x = setInterval(funtion(){
-//      var: now = new Date().getTime();
-//      var: distance = countUpDate - now;
-//      var: seconds = Math.floor(myDate2 / 1000) %60;
-//
-//      document.getElementById("Bcount").innerHTML = seconds;
-//},1000);
 
 
 
